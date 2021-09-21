@@ -117,15 +117,22 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     return true;
 }
 #endif // ENCODER_ENABLE
-/*
+
 void rgb_matrix_indicators_user(void) { 
+
+    int capsleds[8] = {67,68,70,71,73,74,76,77};
+    int numleds[8] = {80,81,83,84,87,88,91,92};
 
     led_t led_state = host_keyboard_led_state(); // Change side LEDs, start at index of 82 and end at 97
 
     if (led_state.caps_lock) { 
-        for (uint8_t i = 82; i < 98; i++) {
-            rgb_matrix_set_color(i, 0xFF, 0x00, 0x00); 
+        for (uint8_t i = 0; i < 9; i++) {
+            rgb_matrix_set_color(capsleds[i], 0xFF, 0x00, 0x00); 
         }
-
     }
-} */
+    if (led_state.num_lock) {
+        for (uint8_t i = 0; i < 9; i++) {
+            rgb_matrix_set_color(numleds[i], 0x00, 0x00, 0xFF);
+        }
+    }
+} 
