@@ -130,10 +130,9 @@ void rgb_matrix_indicators_user(void) {
             rgb_matrix_set_color(capsleds[i], 0xFF, 0x00, 0x00); 
         }
     }
-    if (led_state.num_lock) {
+    if (!led_state.num_lock) {
         for (uint8_t i = 0; i < 8; i++) {
-            rgb_matrix_set_color(numleds[i], 0x00, 0x00, 0xFF);
+            rgb_matrix_set_color(numleds[i], 0x00, 0xFF, 0x00);
         }
     }
 } 
-
