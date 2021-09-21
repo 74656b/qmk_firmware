@@ -1,3 +1,3 @@
-# The default keymap for KBDPAD MKII
+# The not default keymap for KBDPAD MKII by 74656b
 
-Just a numpad. Top row from Cherry G80-3700
+Just a numpad.
