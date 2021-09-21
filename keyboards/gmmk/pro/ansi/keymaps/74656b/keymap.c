@@ -123,7 +123,7 @@ void rgb_matrix_indicators_user(void) {
     int capsleds[8] = {67,68,70,71,73,74,76,77};
     int numleds[8] = {80,81,83,84,87,88,91,92};
 
-    led_t led_state = host_keyboard_led_state(); // Change side LEDs, start at index of 82 and end at 97
+    led_t led_state = host_keyboard_led_state(); // Change side LEDs
 
     if (led_state.caps_lock) { 
         for (uint8_t i = 0; i < 8; i++) {
