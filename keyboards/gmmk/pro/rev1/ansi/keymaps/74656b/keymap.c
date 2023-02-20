@@ -118,7 +118,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 }
 #endif // ENCODER_ENABLE
 
-void rgb_matrix_indicators_user(void) { 
+bool rgb_matrix_indicators_user(void) { 
 
     int capsleds[8] = {67,68,70,71,73,74,76,77};
     int numleds[8] = {80,81,83,84,87,88,91,92};
@@ -135,4 +135,5 @@ void rgb_matrix_indicators_user(void) {
             rgb_matrix_set_color(numleds[i], 0x00, 0xFF, 0x00);
         }
     }
+    return false;
 } 
